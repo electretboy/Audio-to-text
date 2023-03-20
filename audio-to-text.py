@@ -1,4 +1,4 @@
-import whisper
+import whisper
 import tkinter as tk
 from tkinter import filedialog
 
@@ -14,8 +14,7 @@ browse_button.pack()
 
 root.mainloop()
 
-model = whisper.load_model("tiny")
-result = model.transcribe("120.mp3")
-with open('transcription.txt', 'w') as f:
-   for i in result:
-      f.write(result["text"])
+model = whisper.load_model("tiny")
+result = model.transcribe("120.mp3")
+with open('transcription.txt', 'w') as f:
+    f.write(result["text"])
