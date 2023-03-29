@@ -11,8 +11,10 @@ def browse_file():
         f.write(result.text)
 
 root = tk.Tk()
-
-browse_button = tk.Button(root, text="Browse", command=browse_file)
-browse_button.pack()
+root.geometry('300x200')
+root.title("Audio to text transcriber")
+root.configure(bg='dark blue')
+browse_button = tk.Button(root, text="Browse", command=browse_file, bg='light yellow')
+browse_button.pack(padx=30, pady=30)
 
 root.mainloop()
